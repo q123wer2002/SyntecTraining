@@ -1,0 +1,50 @@
+<!DOCTYPE>
+<html ng-app="BeveragesStore" ng-controller="controller_main">
+<head>
+	<!-- for meta -->
+	<meta name="charset" content="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- for title-->
+	<title>BeveragesStore</title>
+
+	<!-- for js library -->
+	<script type="text/javascript" src="http://localhost:8888/js/lib/angular.js"></script>
+	<script type="text/javascript" src="http://localhost:8888/js/lib/jquery.js"></script>
+
+	<!-- import master js and css -->
+	<script type="text/javascript" src="http://localhost:8888/js/mainController.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://localhost:8888/css/layout.css">
+
+	<!-- import current page's js and css -->
+	<script type="text/javascript" src="http://localhost:8888/js/shopping.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://localhost:8888/css/shopping.css">
+</head>
+
+<body ng-controller="controller_beveragesShopping">
+	<div class="header">
+		<a href="javascript:;" id="btnGoShoppingCartPage" title="購物車頁面"><span class="icon" id="shopping_cart_icon"></span></a>
+	</div>
+
+	<div class="body">
+		<!-- name -->
+		<div class="UserName"><input type="text" ng-model="szUserName" placeholder="請輸入您的姓名" /></div>
+
+		<!-- beverage view -->
+		<ul class="beveragesListView">
+			<li class="beverageView" ng-repeat="beverage in aryAllBeverages">
+				<div class="photoOfbeverage">{{beverage.name}}</div>
+				<div class="CountOfbeverageView">
+					<a href="javascript:;" class="btnControlCount btnMinus" ng-click="objBeverageEventHandler.MinusOneProduct(beverage)">-1</a>
+					<div class="nOfThisBeverage"><input type="number" ng-model="beverage.number" /></div>
+					<a href="javascript:;" class="btnControlCount btnAdd" ng-click="objBeverageEventHandler.AddOneProduct(beverage)">+1</a>
+				</div>
+			</li>
+		</ul>
+
+		<!-- add into shopping cart-->
+		<a href="javascript:;" class="btnAddToCart" ng-click="objBeverageEventHandler.AddAllProductIntoShoppingCart()">確定上述飲料，並且加入資料庫</a>
+	</div>
+</body>
+
+</html>

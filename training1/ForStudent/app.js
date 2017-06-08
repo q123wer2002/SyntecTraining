@@ -1,17 +1,28 @@
+'use strict'
+
 //library
 var express = require('express');
 var app = express();
+var path = require('path');
+var bodyParser = require('body-parser');
+var dbapi = require('./apis/dbapi');
 
 //all environments
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 app.use('/static', express.static('public'));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 //local var
 const nListenPort = 8888;
+var szPublicPath = __dirname + "\\public\\";
+
+//for db restfulapi
+app.use('/dbapi', dbapi);
 
 //for router
-app.get('/', function(req,res){
-	res.send('Hello World');
+app.get('/', function(req,res,next){  //localhost:[nListenPort]
+	res.sendFile(szPublicPath + "shopping.html");
 });
 
 //for listen port
