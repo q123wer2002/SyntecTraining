@@ -16,7 +16,6 @@ BeveragesStore.controller('controller_beveragesShopping', function($scope,$http)
 	];
 
 	$scope.szUserName = "";
-
 	$scope.objBeverageEventHandler = {
 		AddOneProduct : function(beverage){
 			//add one
@@ -30,7 +29,7 @@ BeveragesStore.controller('controller_beveragesShopping', function($scope,$http)
 			//minus one
 			beverage.number = beverage.number -1;
 		},
-		AddAllProductIntoShoppingCart : function(){
+		BuyAllBeverages : function(){
 			//HOMEWORK
 			//use db restfulapi to
 			//send shopping products into db

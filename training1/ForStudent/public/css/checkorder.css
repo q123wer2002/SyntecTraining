@@ -1,0 +1,71 @@
+.button{
+	display: inline-block;
+}
+
+/*header*/
+#btnBackToShop{
+	width: 200px;
+	height: 40px;
+	margin: 10px 0px 0px 50px;
+	border-bottom: 1px solid #000000;
+	font-size: 20px;
+	line-height: 40px;
+	text-align: center;
+	color: black;
+}
+#btnBackToShop:hover{
+	border-bottom: 3px solid #000000;
+}
+
+/*body - searchbar*/
+.SearchBar{
+	width: 70%;
+	height:auto;
+	margin: 0px auto 50px auto;
+}
+.SearchBar input{
+	width: 100%;
+	height: 50px;
+	font-size: 20px;
+	text-align: center;
+}
+.SearchBar #btnSearch{
+	width: 100%;
+	height: 50px;
+	margin: 15px 0px 20px 0px;
+	background:#205081;
+	font-size: 20px;
+	line-height: 50px;
+	text-align: center;
+	color: white;
+}
+.SearchBar #btnSearch:hover{
+	background: #4D759D;
+}
+
+/*body - resultarea*/
+.orderList{
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	border-collapse: collapse;
+	color: #000000;
+}
+.orderList td{
+	height: 35px;
+	line-height: 35px;
+	border:1px solid #fcfcfc;
+}
+.orderList tr:nth-child(odd) {
+    background: #D9D9D9;
+}
+.orderList .btnDeleteItem{
+	width: 50%;
+	height: 30px;
+	background: #CD4E53;
+	font-size: 15px;
+	color: white;
+}
+.orderList .btnDeleteItem:hover{
+	background: #E08B8E;
+}

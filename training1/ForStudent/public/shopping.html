@@ -23,7 +23,7 @@
 
 <body ng-controller="controller_beveragesShopping">
 	<div class="header">
-		<a href="javascript:;" id="btnGoShoppingCartPage" title="購物車頁面"><span class="icon" id="shopping_cart_icon"></span></a>
+		<a href="http://localhost:8888/checkorder" id="btnGoSearchingOrder" title="查詢訂單">查詢訂單</a>
 	</div>
 
 	<div class="body">
@@ -43,7 +43,7 @@
 		</ul>
 
 		<!-- add into shopping cart-->
-		<a href="javascript:;" class="btnAddToCart" ng-click="objBeverageEventHandler.AddAllProductIntoShoppingCart()">確定上述飲料，並且加入資料庫</a>
+		<a href="javascript:;" class="btnAddToCart" ng-click="objBeverageEventHandler.BuyAllBeverages()">確定購買上述飲料</a>
 	</div>
 </body>
 

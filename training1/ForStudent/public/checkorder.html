@@ -1,0 +1,58 @@
+<!DOCTYPE>
+<html ng-app="BeveragesStore" ng-controller="controller_main">
+<head>
+	<!-- for meta -->
+	<meta name="charset" content="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- for title-->
+	<title>BeveragesStore - CkeckOrder</title>
+
+	<!-- for js library -->
+	<script type="text/javascript" src="http://localhost:8888/js/lib/angular.js"></script>
+	<script type="text/javascript" src="http://localhost:8888/js/lib/jquery.js"></script>
+
+	<!-- import master js and css -->
+	<script type="text/javascript" src="http://localhost:8888/js/mainController.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://localhost:8888/css/layout.css">
+
+	<!-- import current page's js and css -->
+	<script type="text/javascript" src="http://localhost:8888/js/checkorder.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://localhost:8888/css/checkorder.css">
+</head>
+
+<body ng-controller="controller_shoppingCart">
+	<div class="header">
+		<a href="http://localhost:8888" class="button" id="btnBackToShop" titile="回購物頁面">回購物頁面</a>
+	</div>
+
+	<div class="body">
+		<h1>查詢訂單</h1>
+		<!-- search bar -->
+		<div class="SearchBar">
+			<input type="text" ng-model="objSearch.szUserName" placeholder="請輸入您的姓名" />
+			<a href="javascript:;" class="button" id="btnSearch" title="開始搜尋" ng-click="GoSearching()">搜尋</a>
+		</div>
+
+		<!-- result area -->
+		<table class="orderList" ng-if="objSearch.aryResult.length != 0">
+			<tr style="background:#000;color:white;">
+				<td>品項名稱</td>
+				<td>數量</td>
+				<td>單項金額</td>
+				<td>總共金額</td>
+				<td>操作</td>
+			</tr>
+			<tr ng-repeat="beverage in objSearch.aryResult">
+				<td>{{beverage.name}}</td>
+				<td>{{beverage.number}}</td>
+				<td>{{beverage.cost | currency}}</td>
+				<td>{{beverage.number*beverage.cost | currency}}</td>
+				<td><a href="javascript:;" class="button btnDeleteItem" ng-click="DeleteThisBeverage(beverage)">刪除該項</a></td>
+			</tr>
+		</table>
+		<span ng-if="objSearch.aryResult.length == 0">無搜尋資料</span>
+	</div>
+</body>
+
+</html>

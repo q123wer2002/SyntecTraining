@@ -24,6 +24,9 @@ app.use('/dbapi', dbapi);
 app.get('/', function(req,res,next){  //localhost:[nListenPort]
 	res.sendFile(szPublicPath + "shopping.html");
 });
+app.get('/checkorder', function(req,res,next){  //localhost:[nListenPort]/shoppingcart
+	res.sendFile(szPublicPath + "checkorder.html");
+});
 
 //for listen port
 app.listen(nListenPort, function(){

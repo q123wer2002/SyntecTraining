@@ -10,7 +10,7 @@ app.route('/myShoppingCart')
 	.get(function(req,res,next){
 		//HOMEWORK
 		//use postgre api to post data into database
-		postgreApi.Query('SELECT xxxx FROM xxx WHERE xxxxxx',function(err,data){
+		postgreApi.Query('SELECT * FROM rawdata LIMIT 100',function(err,data){
 			if(err){
 				return res.status(500).json({success: false, data: err});
 			}
@@ -23,7 +23,7 @@ app.route('/myShoppingCart')
 		var objData = req.body;
 
 		//use postgre api to post data into database
-		postgreApi.Query('INSERT INTO xxxx VALUES xxxxxx',function(err,data){
+		postgreApi.Query('INSERT INTO xxxx VALUES xxxxx', function(err,data){
 			if(err){
 				return res.status(500).json({success: false, data: err});
 			}
