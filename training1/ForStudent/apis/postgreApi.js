@@ -2,7 +2,7 @@
 
 const pg = require('pg');
 
-//postgre sql config
+//postgre sql connect config
 var connectionString = {
 	host: 'localhost', // Server hosting the postgres database
 	port: 5432, //env var: PGPORT
@@ -14,15 +14,13 @@ var connectionString = {
 };
 const pool = new pg.Pool(connectionString);
 
-//for error
+//for connect error
 pool.on('error', function (err, client) {
   console.error('idle client error', err.message, err.stack);
 });
 
-//HOMEWORK
-//resource :
-//https://github.com/brianc/node-postgres
-
+//HOMEWORK, to finish sql CRUD method (CREATE, READ, UPDATE, DELETE)
+//resource : "https://github.com/brianc/node-postgres"
 var PostgreApi = {};
 PostgreApi.Query = function(szQuery, fnResponse){
 	return pool.query(szQuery, fnResponse);

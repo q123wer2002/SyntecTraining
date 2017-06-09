@@ -5,10 +5,11 @@ var express = require('express');
 var app = express();
 var postgreApi = require('./postgreApi');
 
-
+//HOMEWORK, need to know that how nodejs can to connect to postgreSQL
+//HOMEWORK, to finish sql CRUD method (CREATE, READ, UPDATE, DELETE)
+//resource : "http://expressjs.com/zh-tw/guide/routing.html"
 app.route('/myShoppingCart')
 	.get(function(req,res,next){
-		//HOMEWORK
 		//use postgre api to post data into database
 		postgreApi.Query('SELECT * FROM rawdata LIMIT 100',function(err,data){
 			if(err){
@@ -19,7 +20,6 @@ app.route('/myShoppingCart')
 		});
 	})
 	.post(function(req,res,next){
-		//HOMEWORK
 		var objData = req.body;
 
 		//use postgre api to post data into database

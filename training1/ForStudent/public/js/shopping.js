@@ -1,5 +1,6 @@
 //controller
 BeveragesStore.controller('controller_beveragesShopping', function($scope,$http){
+	//all beverages show HTML
 	$scope.aryAllBeverages = [
 		{"name":"紅茶", "number":0, "cost":20},
 		{"name":"綠茶", "number":0, "cost":20},
@@ -15,6 +16,7 @@ BeveragesStore.controller('controller_beveragesShopping', function($scope,$http)
 		{"name":"黑糖鮮奶", "number":0, "cost":7},
 	];
 
+	//
 	$scope.szUserName = "";
 	$scope.objBeverageEventHandler = {
 		AddOneProduct : function(beverage){
@@ -29,15 +31,15 @@ BeveragesStore.controller('controller_beveragesShopping', function($scope,$http)
 			//minus one
 			beverage.number = beverage.number -1;
 		},
+		//HOMEWORK
 		BuyAllBeverages : function(){
-			//HOMEWORK
 			//use db restfulapi to
 			//send shopping products into db
 
 			//use ajax_POST method
 			//call http://[ip]:[port]/dbapi/myShoppingCart
 
-			//package data
+			//example for using ajax to connect dbapi
 			var objData = PackageOrderBeverages();
 			$http.post(
 				'http://localhost:8888/dbapi/myShoppingCart', //uri
@@ -47,11 +49,10 @@ BeveragesStore.controller('controller_beveragesShopping', function($scope,$http)
 				//get data from server
 				console.log(data);
 			});
-
 		},
 	};
 
+	//HOMEWORK, pageage all data into db format
 	function PackageOrderBeverages(){
-		//HOMEWORK
 	}
 });
