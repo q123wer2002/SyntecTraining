@@ -41,13 +41,15 @@
 				<td>數量</td>
 				<td>單項金額</td>
 				<td>總共金額</td>
-				<td>操作</td>
+				<td>編輯操作</td>
+				<td>刪除操作</td>
 			</tr>
 			<tr ng-repeat="beverage in objSearch.aryResult">
 				<td>{{beverage.name}}</td>
 				<td>{{beverage.number}}</td>
 				<td>{{beverage.cost | currency}}</td>
 				<td>{{beverage.number*beverage.cost | currency}}</td>
+				<td><a href="javascript:;" class="button btnEditItem">編輯數量</a></td>
 				<td><a href="javascript:;" class="button btnDeleteItem" ng-click="DeleteThisBeverage(beverage)">刪除該項</a></td>
 			</tr>
 		</table>

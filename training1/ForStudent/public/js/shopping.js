@@ -33,11 +33,9 @@ BeveragesStore.controller('controller_beveragesShopping', function($scope,$http)
 		},
 		//HOMEWORK
 		BuyAllBeverages : function(){
-			//use db restfulapi to
-			//send shopping products into db
-
-			//use ajax_POST method
-			//call http://[ip]:[port]/dbapi/myShoppingCart
+			//use db restfulapi to send selected products into db
+			//use ajax POST method
+			//call api : http://[ip]:[port]/dbapi/myShoppingCart
 
 			//example for using ajax to connect dbapi
 			var objData = PackageOrderBeverages();
@@ -49,10 +47,11 @@ BeveragesStore.controller('controller_beveragesShopping', function($scope,$http)
 				//get data from server
 				console.log(data);
 			});
+			//end example
 		},
 	};
 
 	//HOMEWORK, pageage all data into db format
-	function PackageOrderBeverages(){
+	var PackageOrderBeverages = function(){
 	}
 });

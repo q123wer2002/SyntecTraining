@@ -69,3 +69,13 @@
 .orderList .btnDeleteItem:hover{
 	background: #E08B8E;
 }
+.orderList .btnEditItem{
+	width: 50%;
+	height: 30px;
+	background: #22B14C;
+	font-size: 15px;
+	color: white;	
+}
+.orderList .btnEditItem:hover{
+	background: #78DD96;
+}
