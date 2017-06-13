@@ -40,7 +40,7 @@ BeveragesStore.controller('controller_beveragesShopping', function($scope,$http)
 			//example for using ajax to connect dbapi
 			var objData = PackageOrderBeverages();
 			$http.post(
-				'http://localhost:8888/dbapi/myShoppingCart', //uri
+				'http://localhost:8888/api/myShoppingCart', //uri
 				JSON.stringify(objData) //param
 			)
 			.then(function(data){

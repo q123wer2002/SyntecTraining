@@ -5,7 +5,7 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var bodyParser = require('body-parser');
-var dbapi = require('./apis/dbapi');
+var restfulapi = require('./apis/restfulapi');
 
 //all environments
 app.use(express.static(__dirname + '/public'));
@@ -18,7 +18,7 @@ const nListenPort = 8888;
 var szPublicPath = __dirname + "\\public\\";
 
 //for db restfulapi
-app.use('/dbapi', dbapi);
+app.use('/api', dbapi);
 
 //for router
 app.get('/', function(req,res,next){  //localhost:[nListenPort]

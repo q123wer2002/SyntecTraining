@@ -3,7 +3,7 @@
 //lib
 var express = require('express');
 var app = express();
-var postgreApi = require('./postgreApi');
+var postgreApi = require('./postgreapi');
 
 //HOMEWORK, need to know that how nodejs can to connect to postgreSQL
 //HOMEWORK, to finish sql CRUD method (CREATE, READ, UPDATE, DELETE)
