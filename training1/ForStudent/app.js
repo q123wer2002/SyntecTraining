@@ -18,7 +18,7 @@ const nListenPort = 8888;
 var szPublicPath = __dirname + "\\public\\";
 
 //for db restfulapi
-app.use('/api', dbapi);
+app.use('/api', restfulapi);
 
 //for router
 app.get('/', function(req,res,next){  //localhost:[nListenPort]
