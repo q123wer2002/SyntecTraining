@@ -46,11 +46,11 @@
 			</tr>
 			<tr ng-repeat="beverage in objSearch.aryResult">
 				<td>{{beverage.name}}</td>
-				<td>{{beverage.number}}</td>
+				<td>{{beverage.count}}</td>
 				<td>{{beverage.cost | currency}}</td>
-				<td>{{beverage.number*beverage.cost | currency}}</td>
+				<td>{{beverage.count*beverage.cost | currency}}</td>
 				<td><a href="javascript:;" class="button btnEditItem">編輯數量</a></td>
-				<td><a href="javascript:;" class="button btnDeleteItem" ng-click="fnDeleteThisBeverage(beverage)">刪除該項</a></td>
+				<td><a href="javascript:;" class="button btnDeleteItem" ng-click="fnDeleteThisBeverage($index,beverage)">刪除該項</a></td>
 			</tr>
 		</table>
 		<span ng-if="objSearch.aryResult.length == 0">無搜尋資料</span>

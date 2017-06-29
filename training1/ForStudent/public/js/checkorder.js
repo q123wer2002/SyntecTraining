@@ -4,10 +4,10 @@ BeveragesStore.controller('controller_shoppingCart', function($scope,$http){
 	$scope.objSearch = {
 		szUserName : "TestName", //search name
 		aryResult : [ //result, (example)
-			{'name':"奶茶", 'number':5, 'cost':50},
-			{'name':"奶茶", 'number':5, 'cost':50},
-			{'name':"奶茶", 'number':5, 'cost':50},
-			{'name':"奶茶", 'number':5, 'cost':50},
+			{'name':"奶茶", 'count':1, 'cost':50},
+			{'name':"鮮奶茶", 'count':2, 'cost':50},
+			{'name':"果汁", 'count':3, 'cost':50},
+			{'name':"檸檬水", 'count':4, 'cost':50},
 		],
 	};
 
@@ -17,8 +17,9 @@ BeveragesStore.controller('controller_shoppingCart', function($scope,$http){
 	}
 
 	//HOMEWORK, delete this beverage from database
-	$scope.fnDeleteThisBeverage = function(beverage){
-
+	$scope.fnDeleteThisBeverage = function(nIndex, beverage){
+		//only ui
+		$scope.objSearch.aryResult.splice(nIndex,1);
 	}
 
 });
