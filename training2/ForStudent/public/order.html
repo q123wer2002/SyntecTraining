@@ -31,7 +31,7 @@
 		<!-- search bar -->
 		<div class="SearchBar">
 			<input type="text" ng-model="objSearch.szUserName" placeholder="請輸入您的姓名" />
-			<a href="javascript:;" class="button" id="btnSearch" title="開始搜尋" ng-click="fnGoSearching()">搜尋</a>
+			<a href="javascript:;" class="button" id="btnSearch" title="開始搜尋" ng-click="GoSearching()">搜尋</a>
 		</div>
 
 		<!-- result area -->
@@ -50,7 +50,7 @@
 				<td>{{beverage.cost | currency}}</td>
 				<td>{{beverage.number*beverage.cost | currency}}</td>
 				<td><a href="javascript:;" class="button btnEditItem">編輯數量</a></td>
-				<td><a href="javascript:;" class="button btnDeleteItem" ng-click="fnDeleteThisBeverage(beverage)">刪除該項</a></td>
+				<td><a href="javascript:;" class="button btnDeleteItem" ng-click="DeleteThisBeverage(beverage)">刪除該項</a></td>
 			</tr>
 		</table>
 		<span ng-if="objSearch.aryResult.length == 0">無搜尋資料</span>

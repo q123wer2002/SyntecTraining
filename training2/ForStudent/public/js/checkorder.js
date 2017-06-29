@@ -12,12 +12,12 @@ BeveragesStore.controller('controller_shoppingCart', function($scope,$http){
 	};
 
 	//HOMEWORK, search username from database, and push data into [$scope.objSearch.aryResult]
-	$scope.fnGoSearching = function(){
+	$scope.GoSearching = function(){
 
 	}
 
 	//HOMEWORK, delete this beverage from database
-	$scope.fnDeleteThisBeverage = function(beverage){
+	$scope.DeleteThisBeverage = function(beverage){
 
 	}
 

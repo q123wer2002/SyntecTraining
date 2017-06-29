@@ -35,15 +35,18 @@
 			<li class="beverageView" ng-repeat="beverage in aryAllBeverages">
 				<div class="photoOfbeverage">{{beverage.name}}</div>
 				<div class="CountOfbeverageView">
-					<a href="javascript:;" class="btnControlCount btnMinus" ng-click="objBeverageEventHandler.fnMinusOneProduct(beverage)">-1</a>
+					<a href="javascript:;" class="btnControlCount btnMinus" ng-click="objBeverageEventHandler.MinusOneProduct(beverage)">-1</a>
 					<div class="nOfThisBeverage"><input type="number" ng-model="beverage.number" /></div>
-					<a href="javascript:;" class="btnControlCount btnAdd" ng-click="objBeverageEventHandler.fnAddOneProduct(beverage)">+1</a>
+					<a href="javascript:;" class="btnControlCount btnAdd" ng-click="objBeverageEventHandler.AddOneProduct(beverage)">+1</a>
 				</div>
 			</li>
 		</ul>
 
+		<!-- total cost -->
+		<p id="nTotalCost">目前總金額：{{nTotalCost | currency}}</p>
+
 		<!-- add into shopping cart-->
-		<a href="javascript:;" class="btnAddToCart" ng-click="objBeverageEventHandler.fnBuyAllBeverages()">確定購買上述飲料</a>
+		<a href="javascript:;" class="btnAddToCart" ng-click="objBeverageEventHandler.BuyAllBeverages()">確定購買上述飲料</a>
 	</div>
 </body>
 
